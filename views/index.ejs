@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/toDoList.js"></script>
+</head>
+
+<body>
+    <div id="swap">
+        <form action="/todo" method="POST">
+            <input type="text" placeholder="nhap cong viec" required>
+            <button type="submit">them</button>
+        </form>
+        <%= data.length %>
+        <ul>
+            <% for (let i = 0; i < data.length; i++) { %>
+            <li><%= data[i].item %>
+                <% } %>
+        </ul>
+    </div>
+    <!-- <div>Click vào button để xem kết quả</div>
+	<button type="button" onclick="openW()">Mở cửa sổ</button>
+	<button type="button" onclick="closeW()">Đóng cửa sổ</button>
+	<script type="text/javascript">
+		function openW() {
+			toidicode = window.open('http://toidicode.com', 'toidicode', 'width=500,height=600');
+			return false;
+		}
+
+		function closeW() {
+			toidicode.close();
+		}
+	</script> -->
+</body>
+
+</html>
